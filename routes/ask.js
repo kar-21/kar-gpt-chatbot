@@ -15,7 +15,6 @@ router.post("/", async (req, res, next) => {
     });
     res.json({ answer: response.choices[0].message.content });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
